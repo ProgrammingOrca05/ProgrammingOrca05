@@ -8,6 +8,26 @@ I'm always looking to expand my skills, and recently I've developed a deep inter
 I might also start posting tech-related videos on my YouTube channel soon:
 <span style="color:rgb(0,78,149);"> [Orca](https://www.youtube.com/@Orca_2000) </span>; so stay tuned!🌊
 
+<div align="center">
+
+![Profile Views](https://komarev.com/ghpvc/?username=ProgrammingOrca05&style=flat) ![GitHub Followers](https://img.shields.io/github/followers/ProgrammingOrca05?style=flat) ![GitHub Stars](https://img.shields.io/github/stars/ProgrammingOrca05?style=flat)
+
+</div>
+
+---
+## Tech Stack
+<div algin="center">
+<img src="https://skillicons.dev/icons?i=python,js,html,css,r,cpp,cs,nodejs,react,mysql">
+</div>
+
+---
+## Unrelated Stack
+<div algin="center">
+<img src="https://skillicons.dev/icons?i=pr,blender,godot">
+<img src="https://upload.wikimedia.org/wikipedia/commons/9/90/DaVinci_Resolve_17_logo.svg" width="50px">
+<img src="https://upload.wikimedia.org/wikipedia/commons/4/45/The_GIMP_icon_-_gnome.svg" width="60px">
+</div>
+
 
 
 <!--
