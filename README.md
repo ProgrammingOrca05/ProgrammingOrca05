@@ -15,7 +15,7 @@ I might also start posting tech-related videos on my YouTube channel soon:
 </div>
 
 ---
-## Tech Stack <img src="orcaTech.png" width="30px">
+## Tech Stack <img src="orcaTech2.png" width="30px">
 <div align="center">
 <img src="https://skillicons.dev/icons?i=python,js,html,css,r,cpp,cs,nodejs,react,mysql">
 
