@@ -1,4 +1,4 @@
-## CodingOrca <img src="https://i.pinimg.com/736x/11/52/c6/1152c6c443415a3863d715e0a3b9612f.jpg" width="50px">
+## CodingOrca <img src="orca.png" width="30px">
 
 <!--
 **ProgrammingOrca05/ProgrammingOrca05** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
