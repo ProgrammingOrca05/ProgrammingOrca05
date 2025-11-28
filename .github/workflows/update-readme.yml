@@ -13,11 +13,11 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: Get latest YouTube video
-      uses: gaurav-nelson/github-action-get-latest-youtube-video@v1
-      id: yt
-      with:
-        channelId: UCvrk5F0MBiV_py8eFyDxk7w   # <--- put your channel ID here
-        apiKey: ${{ secrets.YOUTUBE_API_KEY }}
+        uses: gaurav-nelson/github-action-get-latest-youtube-video@v1
+        id: yt
+        with:
+          channelId: UCvrk5F0MBiV_py8eFyDxk7w
+          apiKey: ${{ secrets.YOUTUBE_API_KEY }}
 
       - name: Update README.md
         run: |
