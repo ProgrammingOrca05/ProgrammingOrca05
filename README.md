@@ -32,6 +32,12 @@ I might also start posting tech-related videos on my YouTube channel soon:
 
 ---
 
+## Latest video🎥
+
+<!-- YT_VIDEO -->
+
+---
+
 ## My progress 🟩🟩⬜
 
 #### Tech progress
