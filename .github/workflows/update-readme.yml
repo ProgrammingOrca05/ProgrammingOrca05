@@ -1,0 +1,32 @@
+name: Update README with latest YouTube video
+
+on:
+  schedule:
+    - cron: "0 */12 * * *"  # updates every 12 hours
+  workflow_dispatch:
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Get latest YouTube video
+      uses: gaurav-nelson/github-action-get-latest-youtube-video@v1
+      id: yt
+      with:
+        channelId: UCvrk5F0MBiV_py8eFyDxk7w   # <--- put your channel ID here
+        apiKey: ${{ secrets.YOUTUBE_API_KEY }}
+
+      - name: Update README.md
+        run: |
+          sed -i "s|<!-- YT_VIDEO -->|[![Latest YouTube Video](${{ steps.yt.outputs.thumbnail.url }})](${{ steps.yt.outputs.video.url }})|g" README.md
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add README.md
+          git commit -m "Update latest video"
+          git push
