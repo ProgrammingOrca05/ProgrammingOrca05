@@ -16,7 +16,7 @@ jobs:
         uses: gaurav-nelson/github-action-get-latest-youtube-video@v1
         id: yt
         with:
-          channelId: UCvrk5F0MBiV_py8eFyDxk7w
+          channelId: UCvrk5F0MBiV_py8eFyDxk7w  # <-- your ID
           apiKey: ${{ secrets.YOUTUBE_API_KEY }}
 
       - name: Update README.md
