@@ -1,32 +1,37 @@
-name: Update README with latest YouTube video
+name: Update README with latest YouTube video 🎬
 
 on:
+  # Runs every 12 hours
   schedule:
-    - cron: "0 */12 * * *"  # updates every 12 hours
+    - cron: "0 */12 * * *" 
+  # Allows manual trigger via the GitHub Actions tab
   workflow_dispatch:
 
 jobs:
   update-readme:
+    # Use the latest Ubuntu runner image
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      # Step 1: Checkout the repository code
+      - name: Checkout Code
+        uses: actions/checkout@v3
 
-      - name: Get latest YouTube video
-        uses: gaurav-nelson/github-action-get-latest-youtube-video@v1
-        id: yt
+      # Step 2: Pull the latest YouTube videos and update the README
+      # This single step does the heavy lifting: pulls data, formats it, 
+      # and commits/pushes the change if a change occurred.
+      - name: Update YouTube Feed
+        uses: gautamkrishnar/blog-post-workflow@v1
         with:
-          channelId: UCvrk5F0MBiV_py8eFyDxk7w  # <-- your ID
-          apiKey: ${{ secrets.YOUTUBE_API_KEY }}
-
-      - name: Update README.md
-        run: |
-          sed -i "s|<!-- YT_VIDEO -->|[![Latest YouTube Video](${{ steps.yt.outputs.thumbnail.url }})](${{ steps.yt.outputs.video.url }})|g" README.md
-
-      - name: Commit changes
-        run: |
-          git config user.name "github-actions"
-          git config user.email "github-actions@github.com"
-          git add README.md
-          git commit -m "Update latest video"
-          git push
+          # Required: Your YouTube Channel RSS Feed URL (Replace YOUR_CHANNEL_ID)
+          feed_list: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvrk5F0MBiV_py8eFyDxk7w" 
+          # Required: The name of the HTML comment tag to inject content into
+          comment_tag_name: "YOUTUBE"
+          # Optional: Limit the number of videos shown (e.g., 5)
+          max_post_count: 3 
+          # Optional: Automatic commit message
+          commit_message: "docs(readme): update latest YouTube videos"
+          # Optional: Automatically push the changes
+          automatic_push: true
+          # Optional: Ensure the action only runs if content changes
+          disable_html_comment: true # Important for correct Markdown rendering
