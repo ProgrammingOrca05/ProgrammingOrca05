@@ -1,32 +1,27 @@
-name: Update README with latest YouTube video
+name: Update Latest YouTube Video
 
 on:
   schedule:
-    - cron: "0 */12 * * *"  # updates every 12 hours
-  workflow_dispatch:
+    - cron: "0 */12 * * *" # Runs every 12 hours
+  workflow_dispatch: # Allows manual trigger
 
 jobs:
-  update-readme:
+  update-readme-with-youtube:
+    name: Update this repo's README with latest videos
     runs-on: ubuntu-latest
-
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v3
 
-      - name: Get latest YouTube video
-        uses: gaurav-nelson/github-action-get-latest-youtube-video@v1
-        id: yt
+      - name: Pull YouTube RSS Feed
+        uses: gautamkrishnar/blog-post-workflow@master
         with:
-          channelId: UCvrk5F0MBiV_py8eFyDxk7w  # <-- your ID
-          apiKey: ${{ secrets.YOUTUBE_API_KEY }}
-
-      - name: Update README.md
-        run: |
-          sed -i "s|<!-- YT_VIDEO -->|[![Latest YouTube Video](${{ steps.yt.outputs.thumbnail.url }})](${{ steps.yt.outputs.video.url }})|g" README.md
-
-      - name: Commit changes
-        run: |
-          git config user.name "github-actions"
-          git config user.email "github-actions@github.com"
-          git add README.md
-          git commit -m "Update latest video"
-          git push
+          comment_tag_name: "YOUTUBE"
+          # This is the RSS feed format for ANY YouTube channel
+          feed_list: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvrk5F0MBiV_py8eFyDxk7w"
+          max_post_count: 1
+          # Custom template to match your desired format: Image linking to Video
+          template: "$newline[![Latest YouTube Video]($image)]($url)$newline"
+          commit_message: "Updated readme with latest YouTube video"
+          committer_username: "github-actions"
+          committer_email: "github-actions@github.com"
