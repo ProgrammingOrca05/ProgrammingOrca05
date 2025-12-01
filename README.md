@@ -1,12 +1,41 @@
+<div align="center">
+
+  ![giphy](https://github.com/user-attachments/assets/76cba9e8-40ff-4c72-8a8d-b285828fdf86)
+
+</div>
+
 ## Coding Orca <img src="orca.png" width="30px">
 
 `Computer Science & AI`
 <br>
 
+
+<table style="border:0px">
+  <tr>
+    <td>
+      <div>
+
 I'm a Computer Science student specializing in Artificial Intelligence, and I’m building my knowledge of the digital world one step at a time. I love understanding the core of things, not just the surface; so I often try to build apps from scratch whenever possible.
 I'm always looking to expand my skills, and recently I've developed a deep interest in Computer Vision and Computer Graphics.
 I might also start posting tech-related videos on my YouTube channel soon:
 <span style="color:rgb(0,78,149);"> [Orca](https://www.youtube.com/@Orca_2000) </span>; so stay tuned!🌊
+
+</div>
+    </td>
+    <td>
+      <div>
+  
+<img src="https://github.com/user-attachments/assets/25d6ea16-5157-4ff7-8e2b-b8617d7dfd0f" width="300px" >
+  
+  </div>
+
+  </td>
+  </tr>
+</table>
+
+
+
+
 
 <div align="center">
 
@@ -131,6 +160,9 @@ I might also start posting tech-related videos on my YouTube channel soon:
 </tr>
 
 </table>
+
+
+Header art by @FOXADHD
 
 
 <!--
