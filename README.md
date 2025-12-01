@@ -25,7 +25,7 @@ I might also start posting tech-related videos on my YouTube channel soon:
     <td>
       <div>
   
-<img src="https://github.com/user-attachments/assets/25d6ea16-5157-4ff7-8e2b-b8617d7dfd0f" width="300px" >
+<img src="https://github.com/user-attachments/assets/25d6ea16-5157-4ff7-8e2b-b8617d7dfd0f" width="200px" >
   
   </div>
 
