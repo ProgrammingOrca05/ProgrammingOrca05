@@ -17,7 +17,7 @@
 
 I'm a Computer Science student specializing in Artificial Intelligence, and I’m building my knowledge of the digital world one step at a time. I love understanding the core of things, not just the surface; so I often try to build apps from scratch whenever possible.
 I'm always looking to expand my skills, and recently I've developed a deep interest in Computer Vision and Computer Graphics.
-I might also start posting tech-related videos on my YouTube channel soon:
+I might also start posting fun videos on my YouTube channel soon:
 <span style="color:rgb(0,78,149);"> [Orca](https://www.youtube.com/@Orca_2000) </span>; so stay tuned!🌊
 
 </div>
